@@ -72,6 +72,16 @@ Supported flags:
 - `--adaptive` : select the strategy automatically based on input disorder
 - `--bench` : print benchmark information after sorting
 
+### Warning
+
+Program will return "Error" if a flag is passed inside a string that does not include only and exactly one of the allowed flags.
+
+Example:
+
+```
+./push_swap --bench "--simple " $(cat args.txt)
+Error
+```
 ## Notes
 
 ### Algorithm justification

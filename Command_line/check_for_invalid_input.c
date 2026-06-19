@@ -6,7 +6,7 @@
 /*   By: ilbozhek <ilbozhek@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 16:35:24 by tsordo-o          #+#    #+#             */
-/*   Updated: 2026/06/14 20:00:53 by ilbozhek         ###   ########.fr       */
+/*   Updated: 2026/06/16 18:48:56 by ilbozhek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,11 @@ int	recursive_check(char *str)
 	while (ft_isspace(*str))
 		str++;
 	if (*str == '+' || *str == '-')
+	{
 		str++;
+		if (!ft_isdigit(*str))
+			return (0);
+	}
 	while (ft_isdigit(*str))
 		str++;
 	if (ft_isspace(*str))

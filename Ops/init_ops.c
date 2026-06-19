@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   init_ops.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsordo-o <tsordo-o@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/08 19:13:26 by tsordo-o          #+#    #+#             */
-/*   Updated: 2026/06/15 20:25:18 by tsordo-o         ###   ########.fr       */
+/*   Created: 2026/06/15 20:08:29 by tsordo-o          #+#    #+#             */
+/*   Updated: 2026/06/15 20:08:39 by tsordo-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Calculate most aproximate square root*/
-int	ft_sqrt(int num)
-{
-	int	root;
+#include "../ft_pushswap.h"
 
-	if (!num)
+int	init_ops(t_ops *ops)
+{
+	if (!ops)
 		return (0);
-	root = 1;
-	while (root <= num / 2)
-	{
-		if (root * root == num)
-			break ;
-		if (root * root > num)
-			return (root - 1);
-		root++;
-	}
-	return (root);
+	ops->strategy = 0;
+	ops->bench = 0;
+	ops->total_operations = 0;
+	ops->sa = 0;
+	ops->sb = 0;
+	ops->ss = 0;
+	ops->pa = 0;
+	ops->pb = 0;
+	ops->ra = 0;
+	ops->rb = 0;
+	ops->rr = 0;
+	ops->rra = 0;
+	ops->rrb = 0;
+	ops->rrr = 0;
+	return (1);
 }

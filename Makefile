@@ -1,7 +1,7 @@
 NAME = push_swap
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 SRCS = Command_line/check_for_invalid_input.c \
 	Command_line/list_from_argv.c \
 	Lists/add_front.c \
@@ -34,7 +34,6 @@ SRCS = Command_line/check_for_invalid_input.c \
 	Sorting_algorithms/Chunk_sort/push_max.c \
 	Sorting_algorithms/Radix_sort/bit_set_sort.c \
 	Sorting_algorithms/Radix_sort/max_bits.c \
-	Sorting_algorithms/Radix_sort/still_bit_zero.c \
 	Sorting_algorithms/Radix_sort/radix_sort.c \
 	Sorting_algorithms/Selection_sort/look_for_min.c \
 	Sorting_algorithms/Selection_sort/look_for_min_position.c \
@@ -66,7 +65,8 @@ SRCS = Command_line/check_for_invalid_input.c \
 	Utils/init_structs.c \
 	Utils/print_bench.c \
 	Utils/flags_compare.c \
-	Utils/ft_putstr_stderr.c 
+	Utils/ft_putstr_stderr.c \
+	Utils/args_detecter.c
 OBJDIR = Objects
 VPATH = $(sort $(dir $(SRCS)))
 OBJS = $(addprefix $(OBJDIR)/,$(notdir $(SRCS:.c=.o)))

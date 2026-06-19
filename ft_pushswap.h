@@ -6,7 +6,7 @@
 /*   By: ilbozhek <ilbozhek@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 18:24:03 by tsordo-o          #+#    #+#             */
-/*   Updated: 2026/06/14 17:55:21 by ilbozhek         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:56:27 by ilbozhek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,8 @@ void				error_message(void);
 int					get_flag(char *str);
 int					apply_flag(int flag, t_ops *ops);
 void				print_bench(t_ops *ops, t_stack *stack);
-int					ft_putstr_stderr(char *str);
+int					ft_putstr_stderr(const char *str);
+int					args_detecter(int argc, char **argv);
 
 // List management
 
@@ -146,7 +147,6 @@ void				bit_set_sort(t_stack *stack_a, t_stack *stack_b, t_ops *ops,
 						int index);
 int					max_bits(int size);
 void				radix_sort(t_stack *stack_a, t_stack *stack_b, t_ops *ops);
-int					still_bit_zero(t_stack *stack_a, int bit_index);
 
 // Sort utils
 
@@ -157,6 +157,7 @@ t_list				*get_minimum_node(t_stack *stack_a);
 void				assign_index(t_stack *stack_a);
 void				push_all_to_a(t_stack *stack_a, t_stack *stack_b,
 						t_ops *ops);
+void				sort_three(t_stack *stack_a, t_stack *stack_b, t_ops *ops);
 
 // Algorithm selection
 
