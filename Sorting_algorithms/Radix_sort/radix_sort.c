@@ -6,7 +6,7 @@
 /*   By: ilbozhek <ilbozhek@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 16:23:11 by tsordo-o          #+#    #+#             */
-/*   Updated: 2026/06/17 18:46:03 by ilbozhek         ###   ########.fr       */
+/*   Updated: 2026/06/19 19:11:59 by ilbozhek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ void	radix_sort(t_stack *stack_a, t_stack *stack_b, t_ops *ops)
 	bit_index = 0;
 	largest_index_bits = max_bits(stack_a->size);
 	assign_index(stack_a);
+	if (stack_a->size >= 2 && stack_a->size <= 6)
+	{
+		select_by_size(stack_a, stack_b, ops);
+		return ;
+	}
 	while (largest_index_bits--)
 	{
 		bit_set_sort(stack_a, stack_b, ops, bit_index);

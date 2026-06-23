@@ -6,7 +6,7 @@
 /*   By: ilbozhek <ilbozhek@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 19:42:05 by tsordo-o          #+#    #+#             */
-/*   Updated: 2026/06/14 17:53:43 by ilbozhek         ###   ########.fr       */
+/*   Updated: 2026/06/19 19:21:12 by ilbozhek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	look_for_min(t_stack *stack)
 	int		min_found;
 	t_list	*current;
 
-	if (!stack->head)
+	if (!stack || !stack->head)
 		return (0);
 	min_found = stack->head->num;
 	current = stack->head->next;

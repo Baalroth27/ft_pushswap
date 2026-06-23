@@ -6,7 +6,7 @@
 /*   By: ilbozhek <ilbozhek@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 18:24:03 by tsordo-o          #+#    #+#             */
-/*   Updated: 2026/06/19 16:56:27 by ilbozhek         ###   ########.fr       */
+/*   Updated: 2026/06/19 19:10:55 by ilbozhek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,7 +157,13 @@ t_list				*get_minimum_node(t_stack *stack_a);
 void				assign_index(t_stack *stack_a);
 void				push_all_to_a(t_stack *stack_a, t_stack *stack_b,
 						t_ops *ops);
-void				sort_three(t_stack *stack_a, t_stack *stack_b, t_ops *ops);
+void				select_by_size(t_stack *stack_a, t_stack *stack_b,
+						t_ops *ops);
+void				sort_three(t_stack *stack_a, t_ops *ops);
+void				sort_five(t_stack *stack_a, t_stack *stack_b, t_ops *ops);
+void				sort_four(t_stack *stack_a, t_stack *stack_b, t_ops *ops);
+void				sort_six(t_stack *stack_a, t_stack *stack_b, t_ops *ops);
+void				all_indexes_to_zero(t_stack *stack_a);
 
 // Algorithm selection
 

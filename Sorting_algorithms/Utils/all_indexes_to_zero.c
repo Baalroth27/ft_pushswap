@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   select_by_size.c                                   :+:      :+:    :+:   */
+/*   all_indexes_to_zero.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilbozhek <ilbozhek@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/19 16:36:26 by ilbozhek          #+#    #+#             */
-/*   Updated: 2026/06/19 19:34:09 by ilbozhek         ###   ########.fr       */
+/*   Created: 2026/06/19 18:20:05 by ilbozhek          #+#    #+#             */
+/*   Updated: 2026/06/19 18:29:01 by ilbozhek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../ft_pushswap.h"
 
-void	select_by_size(t_stack *stack_a, t_stack *stack_b, t_ops *ops)
+void	all_indexes_to_zero(t_stack *stack_a)
 {
-	if (!stack_a || !stack_a->head || !stack_b || !ops)
+	t_list	*current_node;
+
+	if (!stack_a | !stack_a->head)
 		return ;
-	if (stack_a->size == 3)
-		sort_three(stack_a, ops);
-	else if (stack_a->size == 5)
-		sort_five(stack_a, stack_b, ops);
-	else if (stack_a->size == 4)
-		sort_four(stack_a, stack_b, ops);
-	else if (stack_a->size == 2)
-		ra(stack_a, ops);
-	else if (stack_a->size == 6)
-		sort_six(stack_a, stack_b, ops);
+	current_node = stack_a->head->next;
+	stack_a->head->index = 0;
+	while (current_node != stack_a->head)
+	{
+		current_node->index = 0;
+		current_node = current_node->next;
+	}
 }

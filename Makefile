@@ -46,6 +46,12 @@ SRCS = Command_line/check_for_invalid_input.c \
 	Sorting_algorithms/Utils/look_for_max.c \
 	Sorting_algorithms/Utils/push_all_largest_to_a.c \
 	Sorting_algorithms/Utils/push_all_to_a.c \
+	Sorting_algorithms/Utils/sort_three.c \
+	Sorting_algorithms/Utils/sort_five.c \
+	Sorting_algorithms/Utils/sort_four.c \
+	Sorting_algorithms/Utils/sort_six.c \
+	Sorting_algorithms/Utils/select_by_size.c \
+	Sorting_algorithms/Utils/all_indexes_to_zero.c \
 	Stacks/calculate_disorder.c \
 	Stacks/check_repetition.c \
 	Stacks/init_stack.c \
